@@ -1,0 +1,25 @@
+form {
+  margin-top: 50px;
+}
+
+.form__container {
+  max-width: 500px !important;
+  margin: auto !important;
+  margin-top: 50px;
+}
+
+input,
+textarea {
+  &.ng-invalid.ng-touched {
+    border-color: red;
+    box-shadow: 0 0 0 2px rgba(red, 0.1);
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .form__container {
+    margin-top: 10px;
+    max-width: 80% !important;
+    margin: auto !important;
+  }
+}

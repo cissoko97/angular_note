@@ -1,0 +1,15 @@
+<div #container class="note__card__container">
+  <a [routerLink]="note.id">
+    <div class="note__card__content">
+      <h1 class="note__card__title">{{note.title}} </h1>
+      <div #bodyCard class="note__card__body">
+        <p>{{note.body}} </p>
+        <div #truncator class="fade__out__truncation">
+        </div>
+      </div>
+    </div>
+  </a>
+  <span class="x__button" (click)="deleteNote()">
+    <i class="fas fa-times"></i>
+  </span>
+</div>

@@ -1,0 +1,13 @@
+<button routerLink='new' class="button is-danger add__button">+</button>
+<div class="search__bar__container">
+  <div class="field">
+    <p class="control has-icons-left"><input type="text" placeholder="filter" class="input" [(ngModel)]="filter"
+        (keyup)="filterNote(filter)"><span class="icon is-small is-left"><i class="fas fa-search"></i></span></p>
+  </div>
+</div>
+
+<div #list class="notes__list" [@listAnim]>
+  <app-note-card [@itemAnim] *ngFor="let item of notes ; index as i" [note]="item" (delete)="delete($event)">
+  </app-note-card>
+  <!-- <span class="fade__out_truncation"></span> -->
+</div>

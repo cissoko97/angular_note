@@ -1,0 +1,33 @@
+<div class="form__container">
+  <form [formGroup]="noteForm" (ngSubmit)="formSubmit()">
+    <div class="field">
+      <label for="" class="label">
+        Title
+        <div class="control">
+          <input class="input" [placeholder]="'title of the note'" formControlName=title type="text">
+        </div>
+      </label>
+    </div>
+    <br>
+    <div class="field">
+      <label for="" class="label">Body
+        <div class="control">
+          <textarea class="textarea" [placeholder]="'description of the note (optional)'"
+            formControlName=body></textarea>
+        </div>
+      </label>
+    </div>
+    <br>
+    <div class="field">
+      {{noteForm.value |json}}
+    </div>
+    <div class="field is-grouped is-pulled-right">
+      <div class="control">
+        <button type="button" class="button is-text" routerLink='/note'>Cancel</button>
+      </div>
+      <div class="control">
+        <button type="submit" class="button is-success" [disabled]="!noteForm.valid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

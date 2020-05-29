@@ -1,0 +1,29 @@
+@import '../../../main-styles.scss';
+
+.layout__box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  .page__content {
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+
+  .top__bar {
+    width: 100%;
+    height: 65px;
+    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.15);
+    background: linear-gradient(to right, $pink, $blue);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
